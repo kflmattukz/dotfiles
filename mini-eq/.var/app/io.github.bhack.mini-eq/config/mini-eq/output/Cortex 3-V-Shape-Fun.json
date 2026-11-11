@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "name": "Cortex 3-V-Shape-Fun",
+  "preamp_db": -5.5,
+  "bands": [
+    {
+      "filter_type": 5,
+      "frequency": 100.0,
+      "gain_db": 5.0,
+      "q": 0.7,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 800.0,
+      "gain_db": -2.0,
+      "q": 0.8,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 7000.0,
+      "gain_db": -2.0,
+      "q": 2.5,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 3,
+      "frequency": 9000.0,
+      "gain_db": 3.0,
+      "q": 0.7,
+      "mute": false,
+      "solo": false
+    }
+  ]
+}

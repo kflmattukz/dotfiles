@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "name": "Cortex 4-Vocal-Podcast",
+  "preamp_db": -3.5,
+  "bands": [
+    {
+      "filter_type": 5,
+      "frequency": 120.0,
+      "gain_db": -2.0,
+      "q": 0.7,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 250.0,
+      "gain_db": -2.5,
+      "q": 1.0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 1500.0,
+      "gain_db": 1.5,
+      "q": 1.0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 3000.0,
+      "gain_db": 3.0,
+      "q": 1.2,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 7000.0,
+      "gain_db": -3.0,
+      "q": 2.0,
+      "mute": false,
+      "solo": false
+    }
+  ]
+}

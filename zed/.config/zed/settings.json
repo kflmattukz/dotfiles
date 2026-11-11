@@ -1,0 +1,61 @@
+{
+  "text_rendering_mode": "platform_default",
+  "proxy": "",
+  "markdown_preview": {
+    "font_family": "Adwaita Sans",
+  },
+  "ui_font_weight": 500.0,
+  "ui_font_family": "Geist",
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
+  "auto_install_extensions": {
+    "tokyo-night": true,
+    "oxc": true,
+    "elixir": true,
+    "gleam": true,
+    "java": true,
+    "toml": true,
+    "dockerfile": true,
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "Gruvbox Light",
+    "dark": "Catppuccin Mocha",
+  },
+  "icon_theme": {
+    "mode": "light",
+    "light": "Base Charmed Icons",
+    "dark": "Base Charmed Icons",
+  },
+  "buffer_font_family": "Geist Mono",
+  "buffer_font_weight": 400.0,
+  "buffer_line_height": "standard",
+  "buffer_font_features": {
+    "liga": true,
+    "ss03": true,
+    // "CRSV": false,
+  },
+  "buffer_font_fallbacks": ["JetBrainsMono Nerd Font"],
+  "buffer_font_size": 17.0,
+  "ui_font_size": 17.0,
+  "terminal": {
+    "font_weight": 400.0,
+    "dock": "left",
+    "font_family": "Geist Mono",
+    "font_features": {
+      "liga": true,
+      "ss03": true,
+    },
+    "shell": { "program": "zsh" },
+  },
+  "format_on_save": "on",
+  "telemetry": { "diagnostics": false, "metrics": false },
+  "languages": {
+    "JavaScript": { "formatter": { "language_server": { "name": "oxfmt" } } },
+    "TypeScript": { "formatter": { "language_server": { "name": "oxfmt" } } },
+    "TSX": { "formatter": { "language_server": { "name": "oxfmt" } } },
+  },
+}

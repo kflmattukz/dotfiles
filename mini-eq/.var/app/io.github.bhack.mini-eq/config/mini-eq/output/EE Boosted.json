@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "name": "EE Boosted",
+  "preamp_db": -6.0,
+  "bands": [
+    {
+      "filter_type": 1,
+      "frequency": 32.0,
+      "gain_db": 5.0,
+      "q": 1.5048,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 64.0,
+      "gain_db": 5.0,
+      "q": 1.5048,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 125.0,
+      "gain_db": 0.0,
+      "q": 1.5048,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 250.0,
+      "gain_db": 0.0,
+      "q": 1.5048,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 500.0,
+      "gain_db": 1.0,
+      "q": 1.5048,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 1000.0,
+      "gain_db": 1.0,
+      "q": 1.5048,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 2000.0,
+      "gain_db": 2.0,
+      "q": 1.5048,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 4000.0,
+      "gain_db": 4.0,
+      "q": 1.5048,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 8000.0,
+      "gain_db": 3.0,
+      "q": 1.5048,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 16000.0,
+      "gain_db": 2.0,
+      "q": 1.5048,
+      "mute": false,
+      "solo": false
+    }
+  ]
+}

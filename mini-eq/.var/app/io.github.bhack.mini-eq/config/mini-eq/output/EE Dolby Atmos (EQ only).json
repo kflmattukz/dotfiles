@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "name": "EE Dolby Atmos (EQ only)",
+  "preamp_db": -6.0,
+  "bands": [
+    {
+      "filter_type": 1,
+      "frequency": 25.0,
+      "gain_db": 4.5,
+      "q": 0.7,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 60.0,
+      "gain_db": 3.8,
+      "q": 0.9,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 125.0,
+      "gain_db": 2.2,
+      "q": 1.0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 250.0,
+      "gain_db": -1.5,
+      "q": 1.2,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 500.0,
+      "gain_db": -0.8,
+      "q": 1.2,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 1000.0,
+      "gain_db": 1.0,
+      "q": 1.5,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 2000.0,
+      "gain_db": 2.0,
+      "q": 1.5,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 4000.0,
+      "gain_db": 2.8,
+      "q": 1.2,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 8000.0,
+      "gain_db": 3.5,
+      "q": 1.0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 16000.0,
+      "gain_db": 4.0,
+      "q": 0.8,
+      "mute": false,
+      "solo": false
+    }
+  ]
+}

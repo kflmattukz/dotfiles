@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "name": "Cortex 5-Warm-Relaxed",
+  "preamp_db": -3.5,
+  "bands": [
+    {
+      "filter_type": 5,
+      "frequency": 150.0,
+      "gain_db": 3.0,
+      "q": 0.7,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 3500.0,
+      "gain_db": -1.5,
+      "q": 1.0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 1,
+      "frequency": 7000.0,
+      "gain_db": -3.0,
+      "q": 1.5,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "filter_type": 3,
+      "frequency": 10000.0,
+      "gain_db": -3.0,
+      "q": 0.7,
+      "mute": false,
+      "solo": false
+    }
+  ]
+}

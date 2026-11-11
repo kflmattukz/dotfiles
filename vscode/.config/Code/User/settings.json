@@ -1,0 +1,58 @@
+{
+  // Look
+  "workbench.colorTheme": "Tokyo Night",
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredLightColorTheme": "Tokyo Night Light",
+  "window.titleBarStyle": "custom",
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', 'Geist Mono' ,'Maple Mono', monospace",
+  "editor.fontSize": 14,
+  "editor.fontWeight": "500",
+  "window.zoomLevel": 0.7,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 1.5,
+  "editor.minimap.enabled": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.smoothScrolling": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.renderWhitespace": "trailing",
+  "editor.stickyScroll.enabled": true,
+  "workbench.startupEditor": "none",
+
+  // Terminal
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+  "terminal.integrated.fontSize": 13,
+
+  // Editing
+  "editor.formatOnSave": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.autoSave": "onFocusChange",
+  "explorer.confirmDragAndDrop": false,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+
+  // oxc (oxfmt) for web files
+  "[javascript]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[javascriptreact]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[json]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+
+  // Containers: podman via the docker shim + DOCKER_HOST
+  "dev.containers.dockerPath": "podman",
+
+  // Privacy
+  "telemetry.telemetryLevel": "off",
+  "workbench.activityBar.location": "top",
+  "workbench.preferredDarkColorTheme": "Tokyo Night",
+  "workbench.iconTheme": "charmed-icons",
+  "window.menuBarVisibility": "toggle",
+  "window.density.layout": "compact",
+  "chat.viewSessions.orientation": "stacked",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.sideBar.location": "right",
+  "claudeCode.preferredLocation": "panel",
+}

@@ -1,0 +1,8 @@
+{
+  "background_mode": true,
+  "eq_enabled": true,
+  "start_active_at_login": true,
+  "monitor_enabled": true,
+  "start_at_login": true,
+  "version": 1
+}

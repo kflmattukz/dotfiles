@@ -1,0 +1,21 @@
+# dnf packages the configs in this repo rely on. One per line, # for comments.
+stow
+zsh
+git
+git-delta
+fzf
+fd-find
+bat
+eza
+zoxide
+neovim
+ghostty
+podman
+wl-clipboard
+golang
+flatpak
+dconf
+# needs vscode.repo (added by install.sh)
+code
+# needs cloudflare-warp.repo (added by install.sh); used by warp-on/warp-off aliases
+cloudflare-warp
