@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+# Build VapourSynth-RIFE-ncnn-Vulkan for the io.mpv.Mpv flatpak and install it to
+# ~/.local/lib/vapoursynth-flatpak/rife/ (used by ~~/vapoursynth/rife.vpy). Safe to re-run.
+# Builds inside the flatpak's own SDK (org.freedesktop.Sdk matching the app runtime) so the
+# .so links against exactly what mpv runs with.
+set -euo pipefail
+
+REPO=https://github.com/styler00dollar/VapourSynth-RIFE-ncnn-Vulkan
+MODELS=(rife-v4.25-lite_ensembleFalse rife-v4.22_lite_ensembleFalse rife-v4.6_ensembleFalse)
+VS_TAG=R73   # match: flatpak run --command=python3 io.mpv.Mpv -c 'import vapoursynth as v; print(v.core)'
+WORK=${XDG_CACHE_HOME:-$HOME/.cache}/mpv-rife-build
+DEST=$HOME/.local/lib/vapoursynth-flatpak/rife
+step() { printf '\n==> %s\n' "$*"; }
+
+mkdir -p "$WORK"
+cd "$WORK"
+
+step "source (blobless clone, only ${#MODELS[@]} models; the full repo is GBs of models)"
+if [ ! -d src/.git ]; then
+  git clone --filter=blob:none --no-checkout --depth 1 "$REPO" src
+fi
+git -C src sparse-checkout set --no-cone '/*' '!/models/*' "${MODELS[@]/#//models/}"
+git -C src checkout
+git -C src submodule update --init --recursive --depth 1
+
+step "VapourSynth $VS_TAG headers (the flatpak ships the library but not the headers)"
+mkdir -p vs/include/vapoursynth vs/lib/pkgconfig
+for h in VapourSynth4.h VSHelper4.h VSScript4.h VSConstants4.h; do
+  curl -fsSL -o "vs/include/vapoursynth/$h" "https://raw.githubusercontent.com/vapoursynth/vapoursynth/$VS_TAG/include/$h"
+done
+cat > vs/lib/pkgconfig/vapoursynth.pc <<EOF
+prefix=$WORK/vs
+includedir=\${prefix}/include/vapoursynth
+libdir=\${prefix}/lib
+Name: vapoursynth
+Description: VapourSynth headers
+Version: ${VS_TAG#R}
+Cflags: -I\${includedir}
+EOF
+
+step "build inside the flatpak SDK"
+flatpak run --devel --filesystem="$WORK" --command=sh io.mpv.Mpv -c "
+  set -e
+  cd '$WORK/src'
+  export PKG_CONFIG_PATH='$WORK/vs/lib/pkgconfig'
+  [ -d build ] || meson setup build --buildtype=release
+  ninja -C build
+"
+
+step "install to $DEST"
+mkdir -p "$DEST/models"
+install -m755 src/build/librife.so "$DEST/librife.so"
+for m in "${MODELS[@]}"; do cp -r "src/models/$m" "$DEST/models/"; done
+
+step "self-test inside mpv's sandbox"
+flatpak run --command=python3 io.mpv.Mpv -c "
+import vapoursynth as vs
+c = vs.core
+c.std.LoadPlugin('$DEST/librife.so')
+clip = c.std.BlankClip(format=vs.RGBS, width=960, height=540, length=48, fpsnum=24000, fpsden=1001)
+clip = c.rife.RIFE(clip, model=70, fps_num=60)
+import time; t = time.time()
+for i in range(clip.num_frames): clip.get_frame(i)
+dt = time.time() - t
+print(f'RIFE 540p 24->60: {clip.num_frames/dt:.1f} fps output (need 60 for realtime)')
+"
+echo
+echo "Done. In mpv press Alt+i (off → smooth → rife)."
