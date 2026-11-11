@@ -14,6 +14,28 @@ cd ~/code/dotfiles
 
 Re-link only: `./install.sh stow`. Single package: `stow mpv`.
 
+## Updating (this machine)
+
+Files in `$HOME` are symlinks into this repo. Editing a config in place (or in the app's settings UI) edits the repo file.
+
+```sh
+cd ~/code/dotfiles
+git status && git diff            # see what changed
+dconf/dump.sh                     # GNOME settings changed? re-export them
+flatpak list --app --columns=application > flatpaks.txt   # installed/removed a flatpak?
+git commit -am "..."
+```
+
+New config file to track (example: mpv `script-opts/foo.conf`):
+
+```sh
+mv ~/.var/app/io.mpv.Mpv/config/mpv/script-opts/foo.conf \
+   mpv/.var/app/io.mpv.Mpv/config/mpv/script-opts/
+stow -R mpv
+```
+
+New app is the same, in a new package dir: `mkdir -p <pkg>/<path-under-home>`, move the file in, then `stow <pkg>`.
+
 ## Packages
 
 | Package | Target |
