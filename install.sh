@@ -28,7 +28,12 @@ packages() {
 flatpaks() {
   step "flatpaks"
   flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-  xargs flatpak install --user -y --noninteractive flathub < flatpaks.txt
+  flatpak remote-add --user --if-not-exists flatpark https://dl.flatpark.org/flatpark.flatpakrepo
+  # flatpaks.txt is "<remote><TAB><app-id>" per line: install each group from its own remote
+  local r
+  for r in $(cut -f1 flatpaks.txt | sort -u); do
+    awk -v r="$r" '$1 == r { print $2 }' flatpaks.txt | xargs flatpak install --user -y --noninteractive "$r"
+  done
 }
 
 tools() {

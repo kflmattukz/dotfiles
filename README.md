@@ -22,7 +22,7 @@ Files in `$HOME` are symlinks into this repo. Editing a config in place (or in t
 cd ~/code/dotfiles
 git status && git diff            # see what changed
 dconf/dump.sh                     # GNOME settings changed? re-export them
-flatpak list --app --columns=application > flatpaks.txt   # installed/removed a flatpak?
+flatpak list --app --columns=origin,application > flatpaks.txt   # installed/removed a flatpak?
 git commit -am "..."
 ```
 
@@ -50,7 +50,7 @@ New app is the same, in a new package dir: `mkdir -p <pkg>/<path-under-home>`, m
 Not stowed:
 
 - `dconf/`: GNOME settings. Restore with `./install.sh stow`. Re-export with `dconf/dump.sh`, which strips gsconnect pairing and tokens.
-- `packages.txt`, `flatpaks.txt`: lists that `install.sh` installs from. Refresh flatpaks with `flatpak list --app --columns=application > flatpaks.txt`.
+- `packages.txt`, `flatpaks.txt`: lists that `install.sh` installs from. Refresh flatpaks with `flatpak list --app --columns=origin,application > flatpaks.txt`.
 
 ## Kept out on purpose (public repo)
 

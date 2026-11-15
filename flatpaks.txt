@@ -1,22 +1,22 @@
-be.alexandervanhee.gradia
-com.anthropic.ClaudeDesktop
-com.dbxio.dbx
-com.github.IsmaelMartinez.teams_for_linux
-com.github.tchx84.Flatseal
-com.google.Chrome
-com.mattjakeman.ExtensionManager
-com.rafaelmardojai.Blanket
-com.spotify.Client
-io.github.bhack.mini-eq
-io.github.giantpinkrobots.flatsweep
-io.github.kolunmi.Bazaar
-io.github.realmazharhussain.GdmSettings
-io.missioncenter.MissionCenter
-io.mpv.Mpv
-md.obsidian.Obsidian
-net.imput.helium
-org.gnome.Firmware
-org.localsend.localsend_app
-org.onlyoffice.desktopeditors
-page.tesk.Refine
-top.akizip.akizip
+flathub	be.alexandervanhee.gradia
+flatpark	com.anthropic.ClaudeDesktop
+flatpark	com.dbxio.dbx
+flathub	com.github.IsmaelMartinez.teams_for_linux
+flathub	com.github.tchx84.Flatseal
+flathub	com.google.Chrome
+flathub	com.mattjakeman.ExtensionManager
+flathub	com.rafaelmardojai.Blanket
+flathub	com.spotify.Client
+flathub	io.github.bhack.mini-eq
+flathub	io.github.giantpinkrobots.flatsweep
+flathub	io.github.kolunmi.Bazaar
+flathub	io.github.realmazharhussain.GdmSettings
+flathub	io.missioncenter.MissionCenter
+flathub	io.mpv.Mpv
+flathub	md.obsidian.Obsidian
+flatpark	net.imput.helium
+flathub	org.gnome.Firmware
+flathub	org.localsend.localsend_app
+flathub	org.onlyoffice.desktopeditors
+flathub	page.tesk.Refine
+flathub	top.akizip.akizip
